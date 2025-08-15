@@ -32,6 +32,13 @@ app.use(
   })
 );
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+app.head("/health", (req, res) => {
+  res.sendStatus(200);
+});
+
 // API routes
 app.get("/", (req, res) => res.send("API is working."));
 app.use("/api/auth", authRouter);
