@@ -85,7 +85,6 @@ export const login = async (req, res) => {
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
-    // ✅ Return user info including _id
     return res.json({
       success: true,
       user: {
