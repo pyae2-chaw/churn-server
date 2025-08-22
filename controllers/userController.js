@@ -2,7 +2,7 @@ import userModel from "../models/userModels.js";
 
 export const getUserData = async (req, res) => {
   try {
-    const userId = req.user?.id; // ✅ use from middleware
+    const userId = req.user?.id;
     if (!userId) {
       return res.json({ success: false, message: "User ID missing." });
     }

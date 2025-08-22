@@ -1,4 +1,3 @@
-// middleware/userAuth.js
 import jwt from "jsonwebtoken";
 
 const userAuth = (req, res, next) => {

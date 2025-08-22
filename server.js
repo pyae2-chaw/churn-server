@@ -7,7 +7,7 @@ import authRouter from "./routes/authRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 import uploadRouter from "./routes/uploadRoutes.js"; // 👈 Import upload routes here
 
-const app = express(); // ✅ Must be defined before using it
+const app = express();
 
 const port = process.env.PORT || 4000;
 connectDB();
@@ -43,6 +43,6 @@ app.head("/health", (req, res) => {
 app.get("/", (req, res) => res.send("API is working."));
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
-app.use("/api/upload", uploadRouter); // ✅ Use after app is defined
+app.use("/api/upload", uploadRouter);
 
 app.listen(port, () => console.log(`Server started on PORT:${port}`));
