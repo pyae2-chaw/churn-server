@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 import connectDB from "./config/mongodb.js";
 import authRouter from "./routes/authRoutes.js";
 import userRouter from "./routes/userRoutes.js";
-import uploadRouter from "./routes/uploadRoutes.js"; // 👈 Import upload routes here
+import uploadRouter from "./routes/uploadRoutes.js";
 
 const app = express();
 
